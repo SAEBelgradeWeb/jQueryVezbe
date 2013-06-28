@@ -1,0 +1,42 @@
+body{
+	background-color: white;
+}
+.thumbs{
+	width: 220px;
+	float: left;
+	display: block;
+}
+.thumbs img{
+	display: block;
+	margin-bottom: 10px;
+}
+.big{
+	border: 1px dashed #666;
+	float:left;
+}
+.big img{
+	width: 550px;
+}
+.popup{
+	background-color: rgb(247, 247, 247);
+	width: 250px;
+	height: 250px;
+	border: 1px solid #ADADAD;
+	border-radius: 7px;
+	box-shadow: 2px 2px 25px #000;
+	margin: 0 auto;
+	padding: 10px;
+	display: none;
+	z-index: 1000 !important;
+}
+.overlay{
+	background-color: rgba(0,0,0,0.5);
+	width: 100%;
+	height: 1080px;
+	position: absolute;
+	top:0;
+	left:0;
+	display:none;
+	z-index:950 !important;
+	/*margin-top: -100px;*/
+}
