@@ -1,0 +1,65 @@
+<html>
+<head>
+  <title>500 animacija</title>
+    <meta charset="utf-8"> 
+  <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+	<style type="text/css">
+ 
+.cell {
+    float: left;
+    width: 149px;
+    overflow: hidden;
+}
+ 
+    </style>
+</head>
+<body>
+ 
+<div style="width:800px;margin: 0 auto;">
+ 
+    <div class="cell">
+        <img src="http://www.fiat.com/Resources/img/cars/5_secondi/500/149x85_motori.png">
+    </div>
+ 
+</div>
+ 
+<!-- KOD -->
+<script type="text/javascript">
+ 
+    $(document).ready(function(){ 
+  
+ 
+  var i = 1
+ 
+$('.cell img').hover(function(){   //mouse enter
+     
+  var counting = setInterval(function() { 
+    
+ // uslov da se animacija odigra samo u jednom pravcu i zavrsi na novom pocetku
+    if (i < 81) { i++} else if ( i === 81) { i = 0 , clearInterval(counting) } ; 
+    
+    var sum = i * 149;
+        
+    $('.cell img').css('marginLeft', - sum);
+    
+  }, 50);
+  
+  
+}, function(){     //mouse leave   -  doesnt stop -.-
+    $('.cell img').end().css('marginLeft', 0);
+});
+ 
+ 
+/*   ovo sam nesto pokusavao ali nisam znao kako spojiti setInterval i animate
+$('.cell img').hover(function(){
+  $('.cell img').animate( {marginLeft: '-149px'}, 50);
+}, function(){ 
+  $('.cell img').animate( {marginLeft: '0'}, 50);
+});
+*/
+ 
+    });
+</script>
+ 
+</body>
+</html>
